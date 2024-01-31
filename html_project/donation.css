@@ -1,0 +1,134 @@
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    /* border: solid black 0 0 1px 0; */
+    border-bottom: solid #C1F7D5 2px;
+    outline: none;
+    color: white;
+}
+
+label {
+    font-size: 0.7rem;
+    color: white;
+}
+
+header>p {
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px 8% 20px 8%;
+    background: url('./resources/donation/annie-spratt-427340-unsplash.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+section>p {
+    padding-bottom: 20px;
+    font-family: flood std;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.section_body {
+    background-color:#354463;
+}
+
+.info>p,
+.pay>p {
+    padding: 30px 0 15px 0;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.info_form {
+    display: grid;
+    grid-template-areas:
+        "a a b b"
+        "c c c c"
+        "d d e f"
+        "g g g g";
+    gap: 1rem;
+}
+
+
+.info_form>div:nth-child(1) {
+    grid-area: a;
+}
+
+.info_form>div:nth-child(2) {
+    grid-area: b;
+}
+
+.info_form>div:nth-child(3) {
+    grid-area: c;
+}
+
+.info_form>div:nth-child(4) {
+    grid-area: d;
+}
+
+.info_form>div:nth-child(7) {
+    grid-area: g;
+}
+
+.pay_form {
+    display: grid;
+    grid-template-areas:
+        "a a a a"
+        "b b c c";
+    gap: 1rem;
+}
+
+.pay_form>div:nth-child(2)>div {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.pay_form>div:nth-child(1) {
+    grid-area: a;
+}
+
+.pay_form>div:nth-child(2) {
+    grid-area: b;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.pay_form>div:nth-child(3) {
+    grid-area: c;
+}
+
+.payment>p:nth-child(1) {
+    /* padding: 20px 0; */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 40px 0;
+}
+
+.payment>button {
+    width: 100%;
+    background-color: #C1F7D5;
+    font-weight: bold;
+    padding: 12px 0;
+    border-radius: 1.2rem;
+}
+
+.payment>p:nth-child(3) {
+    /* padding: 20px 0; */
+    color: #C1F7D5;
+    font-size: 0.7rem;
+    /* font-weight: bold; */
+    padding-top: 20px;
+    text-decoration: underline;
+}

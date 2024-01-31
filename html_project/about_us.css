@@ -1,0 +1,287 @@
+.header>* {
+    padding-top: 20px;
+}
+
+.header_ele1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_ele1>p {
+    font-weight: bold;
+}
+
+.header_ele2>button {
+    width: 100%;
+    background-color: #C1F7D5;
+    font-weight: bold;
+}
+
+.section1 {
+    padding-bottom: 40px;
+}
+
+.section1>p {
+    font-size: 2.4rem;
+    font-family: flood std;
+    padding-top: 20px;
+    width: 60%;
+    color: white;
+}
+
+.section1_ele {
+    margin-top: 7rem;
+    background-color: white;
+}
+
+.section1_ele>p:nth-child(1) {
+    background-color: #354463;
+    color: white;
+    width: 50%;
+    margin: auto;
+}
+
+.section1_ele>p:nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 8% 20px 8%;
+}
+
+.section1 {
+    background: url('./resources/about-us/annie-spratt-427339-unsplash.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35%;
+    /* background-color: ; */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* backdrop-filter: contrast(150%); */
+
+}
+
+.section2 {
+    /* background-color: blueviolet; */
+    padding: 20px 8% 15% 8%;
+    background-color: #354463;
+}
+
+.section2>div:nth-child(1) {
+    text-align: center;
+}
+
+.section2>div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    padding-top: 40px;
+}
+
+.section2_heading {
+    /* padding: 20px 0; */
+    background-color: #fff;
+    width: 50%;
+    margin: auto;
+    padding: 8px 0;
+}
+
+.section2_body {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.section2_card {
+    font-size: 0.8rem;
+}
+
+.section2_card>p:nth-child(2) {
+    font-weight: bold;
+    padding: 4px 0;
+    color: #fff;
+    /* font-size: 2rem; */
+}
+
+.section2_card>p:nth-child(3) {
+    color: #fff;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding-top: 4px;
+}
+
+.section2_icon {
+    width: 30%;
+    padding-top: 10px;
+
+}
+
+.section3>div:nth-child(1) {
+    display: grid;
+    gap: 1.4rem;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.section3>div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+}
+
+.section3_ele>p:nth-child(1) {
+    background-color: #354463;
+    color: white;
+    width: 50%;
+    margin: auto;
+    padding: 8px 0;
+}
+
+.section3_ele>p:nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.section3_ele>p:nth-child(3) {
+    font-size: 0.7rem;
+    width: 80%;
+    margin: auto;
+    line-height: 1rem;
+}
+
+.section3_card>img {
+    display: block;
+}
+
+.section3_card>p {
+    font-size: 0.7rem;
+    background-color: #354463;
+    color: white;
+    padding: 8px 0 8px 10%;
+}
+
+
+
+.section4 {
+    background: url('./resources/about-us/Impact\ Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35%;
+    /* background-color: ; */
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    background-color: #354463;
+    display: grid;
+    gap: 1.6rem;
+    /* padding-top: 20px; */
+    padding: 20px 8% 40px 8%;
+}
+
+
+.section4>p:nth-child(1) {
+    width: 50%;
+    margin: auto;
+    padding: 8px 0;
+    background-color: #fff;
+}
+
+.section4>p:nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 0;
+    color: white;
+}
+
+.section4>div>p:nth-child(1) {
+    font-family: flood std;
+    font-size: 2rem;
+    color: white;
+}
+
+.section4>div>p:nth-child(2) {
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 60%;
+    color: white;
+    margin: auto;
+}
+
+/*.section4>p:nth-child(1) {
+    padding-top: 20px;
+} */
+
+.section5 {
+    background-color: #354463;
+    display: grid;
+    gap: 1rem;
+}
+
+.section5>p {
+    font-family: flood std;
+    font-size: 2.4rem;
+    padding-top: 40px;
+    color: white;
+}
+
+.section5_ele>.header_drop {
+    background-color: #fff;
+    width: 50%;
+    margin: auto;
+}
+
+.section5_ele>img{
+    display: block;
+}
+
+.section5_ele>div {
+    background-color: #fff;
+}
+
+.section5_ele>div>p:nth-child(1) {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.section5_ele>div>p:nth-child(2) {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    padding: 30px 4% 30px 4%;
+}
+
+/* .section5_ele>* {
+    margin: 20px 0;
+}*/
+
+.section5_ele>div>button {
+    background-color: #C1F7D5;
+    font-weight: bold;
+}
+
+.section6 {
+    background-color: #C1F7D5;
+}
+
+.section6_head {
+    padding: 20px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.section6_body {
+    display: flex;
+    justify-content: space-between;
+    /* padding-bottom: 20px; */
+}
+
+.section6_body>input {
+    width: 60%;
+    border: transparent;
+    border-radius: 1rem;
+    outline: transparent;
+    padding-left: 4%;
+}
+
+.section6_body>button {
+    background-color: #354463;
+    color: #fff;
+    font-weight: bold;
+}
