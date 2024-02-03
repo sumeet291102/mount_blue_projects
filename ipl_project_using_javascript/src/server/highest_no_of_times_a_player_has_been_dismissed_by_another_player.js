@@ -14,10 +14,14 @@ const { parse } = require("csv-parse");
 const fs = require("fs");
 
 const path = '/home/sumeet291102/projects/project/ipl_project_using_javascript/src/data/deliveries.csv';
-
 const deliveries = [];
 
 function calc(deliveries) {
+
+    if(deliveries === undefined) {
+        return "Data is undefined";
+    }
+
     let player_dismissed_by_another_player = {};
 
     deliveries.forEach(delivery => {

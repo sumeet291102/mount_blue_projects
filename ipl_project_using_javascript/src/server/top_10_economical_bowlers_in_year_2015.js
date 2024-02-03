@@ -17,6 +17,11 @@ const path_matches = '/home/sumeet291102/projects/project/ipl_project_using_java
 const path_deliveries = '/home/sumeet291102/projects/project/ipl_project_using_javascript/src/data/deliveries.csv';
 
 function calc(seasons_index, deliveries) {
+
+    if(seasons_index === undefined || deliveries === undefined) {
+        return "Data is undefined";
+    }
+
     let bowler_runs_per_over = {};
 
     deliveries.forEach(delivery => {

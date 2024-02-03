@@ -7,6 +7,11 @@ const path = '/home/sumeet291102/projects/project/ipl_project_using_javascript/s
 const matches = [];
 
 function calc(matches) {
+
+    if(matches === undefined) {
+        return "Data is undefined";
+    }
+
     let seasons_winners = {};
 
     matches.forEach(match => {

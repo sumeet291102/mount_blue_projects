@@ -4,10 +4,14 @@ const { parse } = require("csv-parse");
 const fs = require("fs");
 
 const path = '/home/sumeet291102/projects/project/ipl_project_using_javascript/src/data/matches.csv';
-
 const matches = [];
 
 function calc(matches) {
+
+    if(matches === undefined) {
+        return "Data is undefined";
+    }
+
     let won_toss_and_match = {};
 
     matches.forEach(match => {

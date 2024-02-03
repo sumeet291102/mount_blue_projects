@@ -5,7 +5,13 @@ const fs = require("fs");
 
 const path_matches = '/home/sumeet291102/projects/project/ipl_project_using_javascript/src/data/matches.csv';
 const path_deliveries = '/home/sumeet291102/projects/project/ipl_project_using_javascript/src/data/deliveries.csv';
+
 function calc(seasons_index, deliveries) {
+
+    if(seasons_index === undefined || deliveries === undefined) {
+        return "Data is undefined";
+    }
+
     let teams_extra_runs = {};
 
     deliveries.forEach(delivery => {
@@ -66,6 +72,6 @@ fs.createReadStream(path_matches)
                         console.log(err.message);
                         return;
                     }
-                })
+                });
             });
     });

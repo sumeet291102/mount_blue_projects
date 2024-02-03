@@ -16,6 +16,11 @@ const fs = require("fs");
 const path = '/home/sumeet291102/projects/project/ipl_project_using_javascript/src/data/deliveries.csv';
 
 function calc(deliveries) {
+
+    if(deliveries === undefined) {
+        return "Data is undefined";
+    }
+
     let bowler_runs_per_over = {};
 
     deliveries.forEach(delivery => {
@@ -55,7 +60,6 @@ function calc(deliveries) {
     return bowler_arr[0];
 }
 
-
 const deliveries = [];
 
 fs.createReadStream(path)
@@ -82,5 +86,5 @@ fs.createReadStream(path)
                 console.log(err.message);
                 return;
             }
-        })
+        });
     });
