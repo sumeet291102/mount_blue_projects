@@ -16,7 +16,7 @@ function calc(seasons_index, deliveries) {
 
     deliveries.forEach(delivery => {
         if (seasons_index[delivery['match_id']] === '2016') {
-            teams_extra_runs[delivery['bowling_team']] === undefined ? teams_extra_runs[delivery['bowling_team']] = 1 : teams_extra_runs[delivery['bowling_team']]++;
+            teams_extra_runs[delivery['bowling_team']] === undefined ? teams_extra_runs[delivery['bowling_team']] = parseInt(delivery['extra_runs']) : teams_extra_runs[delivery['bowling_team']] += parseInt(delivery['extra_runs']);
         }
     })
 
