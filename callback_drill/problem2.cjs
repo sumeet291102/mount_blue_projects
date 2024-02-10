@@ -10,22 +10,20 @@
 */
 
 const fs = require('fs');
-const path = '/home/sumeet291102/projects/project/callback_drill/';
-const store_file_name = 'filename.txt';
 
-const output = (path, store_file_name) => {
+const output = (store_file_name) => {
     
-    fs.readFile(path+'lipsum_1.txt', 'utf8', (err, data) => {
+    fs.readFile('./lipsum_1.txt', 'utf8', (err, data) => {
         if (err) throw err;
         console.log(data);
     
-        fs.writeFile(path+'file1.txt', data.toUpperCase(), err => {
+        fs.writeFile('./file1.txt', data.toUpperCase(), err => {
             if(err) throw err;
     
-            fs.appendFile(path+store_file_name, 'file1.txt ', err => {
+            fs.appendFile(store_file_name, './file1.txt ', err => {
                 if(err) throw err;
     
-                fs.readFile(path+'file1.txt', 'utf8', (err, data) => {
+                fs.readFile('./file1.txt', 'utf8', (err, data) => {
                     if (err) throw err;
                     console.log(data);
     
@@ -33,37 +31,37 @@ const output = (path, store_file_name) => {
                     let sentences_string = "";
                     sentences.forEach(sentence => sentences_string+=sentence+'\n');
     
-                    fs.writeFile(path+'file2.txt', sentences_string, err => {
+                    fs.writeFile('./file2.txt', sentences_string, err => {
                         if(err) throw err;
                 
-                        fs.appendFile(path+store_file_name, 'file2.txt ', err => {
+                        fs.appendFile(store_file_name, './file2.txt ', err => {
                             if(err) throw err;
                 
-                            fs.readFile(path+'file2.txt', 'utf8', (err, data) => {
+                            fs.readFile('./file2.txt', 'utf8', (err, data) => {
                                 if (err) throw err;
                                 console.log(data);
                             
-                                fs.writeFile(path+'file3.txt', data.split('').sort().join(''), err => {
+                                fs.writeFile('./file3.txt', data.split('').sort().join(''), err => {
                                     if(err) throw err;
                             
-                                    fs.appendFile(path+store_file_name, 'file3.txt ', err => {
+                                    fs.appendFile(store_file_name, './file3.txt ', err => {
                                         if(err) throw err;
                             
-                                        fs.readFile(path+store_file_name, 'utf8', (err, data) => {
+                                        fs.readFile(store_file_name, 'utf8', (err, data) => {
                                             if (err) throw err;
     
                                             let file_names = data.split(' ');
                                             file_names.pop();
     
                                             file_names.forEach(file_name => {
-                                                fs.unlink(path+file_name, err => {
+                                                fs.unlink(file_name, err => {
                                                     if (err) throw err;
                                                     
                                                     console.log('success');
                                                 })
                                             })
     
-                                            fs.unlink(path+store_file_name, err => {
+                                            fs.unlink(store_file_name, err => {
                                                 if (err) throw err;
     
                                                 console.log('completed');
