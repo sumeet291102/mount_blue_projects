@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+
+<body>
+    <div id="container" style="width:100%; height:400px;"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const chart = Highcharts.chart('container', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Matches played per year'
+                },
+                xAxis: {
+                    categories: [{% for row in chart_data %}"{{ row.season }}", {% endfor %}]
+            },
+            yAxis: {
+            title: {
+                text: 'No of matches'
+            }
+        },
+            series: [{
+                name: 'Years',
+                data: [{% for row in chart_data %}{{ row.matches_count }}, {% endfor %}]
+            }]
+        });
+    });
+    </script>
+</body>
+
+</html>

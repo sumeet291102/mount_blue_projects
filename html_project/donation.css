@@ -19,16 +19,16 @@ header>p {
     font-weight: bold;
 }
 
-section {
+.section {
     padding: 20px 8% 20px 8%;
     background: url('./resources/donation/annie-spratt-427340-unsplash.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 70%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color:#354463;
 }
 
-section>p {
+.section>p {
     padding-bottom: 20px;
     font-family: flood std;
     color: white;
@@ -131,4 +131,31 @@ section>p {
     /* font-weight: bold; */
     padding-top: 20px;
     text-decoration: underline;
+}
+
+.expiration_date {
+    padding-bottom: 1px;
+}
+
+
+@media (min-width: 501px) and (max-width: 950px) {
+    .section>p {
+        font-size: 2.8rem;
+        padding: 40px 0;
+    }
+}
+
+@media (min-width: 951px) {
+    .section {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 60px;
+    }
+
+    .section>p {
+        font-size: 3.8rem;
+        text-align: left;
+        padding-left: 8%;
+        width: 80%;
+    }
 }

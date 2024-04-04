@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matches per Year Chart</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'top 10 economical bowlers in 2015'
+                },
+                xAxis: {
+                    categories: [{% for entry in chart_data %}"{{ entry.bowling_team }}", {% endfor %}]
+                },
+                yAxis: {
+                    title: {
+                        text: 'runs'
+                    }
+                },
+                series: [{
+                    name: 'runs',
+                    data: [{% for entry in chart_data %}{{ entry.extra_runs }}, {% endfor %}]
+                }]
+            });
+        });
+    </script>
+</body>
+</html>

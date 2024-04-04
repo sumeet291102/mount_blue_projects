@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matches Won Per Team Per Year</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+    <!--{% for i in chart_data %} {{ i }} {% endfor %} {{chart_data}}-->
+    <div id="matchesChart"></div>
+    <script>
+        var chartData = {{ chart_data|safe }};
+
+        function teams() {
+            var teams = [];
+            for (var year in chartData) {
+                var yearTeams = Object.keys(chartData[year]);
+                for (var i = 0; i < yearTeams.length; i++) {
+                    if (!teams.includes(yearTeams[i])) {
+                        teams.push(yearTeams[i]);
+                    }
+                }
+            }
+            return teams;
+        }
+
+        var seriesData = teams().map((team) => ({
+            name: team,
+            data: Object.entries(chartData).map(([year, wins]) => [parseInt(year), wins[team]])
+        }));
+        
+    
+
+      // Render the Highcharts chart
+
+      Highcharts.chart('matchesChart', {
+        chart: {
+          type: 'column'
+        },
+        title: {
+          text: 'Matches Won Per Team Per Year'
+        },
+        xAxis: {
+          title: {
+            text: 'Year'
+          },
+          categories: Object.keys(chartData).map(Number)
+        },
+        yAxis: {
+          title: {
+            text: 'Matches Won'
+          }
+        },
+        legend: {
+          enabled: true
+        },
+        series: seriesData
+      });
+    </script>
+  </body>
+</html>

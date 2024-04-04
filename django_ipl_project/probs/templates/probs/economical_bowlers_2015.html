@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matches per Year Chart</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'extra runs conceded per team in 2016'
+                },
+                xAxis: {
+                    categories: [{% for entry in chart_data %}"{{ entry.bowler }}", {% endfor %}]
+                },
+                yAxis: {
+                    title: {
+                        text: 'extra runs'
+                    }
+                },
+                series: [{
+                    name: 'extra runs',
+                    data: [{% for entry in chart_data %}{{ entry.economy }}, {% endfor %}]
+                }]
+            });
+        });
+    </script>
+</body>
+</html>

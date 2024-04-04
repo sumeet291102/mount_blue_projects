@@ -85,3 +85,34 @@ li {
     font-size: 2.5rem;
     text-align: right;
 }
+
+@media (min-width: 901px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+        padding-bottom: 50px;
+    }
+
+    .footer_ele1 {
+        display: flex;    
+    }
+
+    .footer_ele1>div {
+        flex-basis: 100%;
+    }
+
+    .footer_ele1_body {
+        border-bottom: solid black 1px;
+        width: 90%;
+    }
+
+    .footer_ele1_body_ele {
+        padding-top: 8px;
+    }
+
+    .footer_ele2 {
+        padding: 0;
+    }
+
+}
