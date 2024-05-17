@@ -161,3 +161,4 @@ cython_debug/
 
 # ./company_master_project/resources/Maharashtra.csv
 *.csv
+trello_apis/node_modules/
